@@ -1,0 +1,23 @@
+query MyContests {
+    me(key: "4242") {
+      id
+      email
+      fullName
+      contestsCount
+      namesCount
+      votesCount
+      contests {
+        title
+        status
+        code
+        names {
+          label
+          description
+          createdBy {
+            id
+            fullName
+          }
+        }
+      }
+    }
+  }
