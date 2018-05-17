@@ -9,7 +9,7 @@ module.exports = pgPool => {
             select * from users
             where api_key = ANY($1)
             `, [apiKeys]).then(res => {
-                return orderedFor(res.rows, apiKeys, 'apiKey', true)
+                return orderedFor(res.rows, apiKeys, 'apiKey', true);
             });
         },
 
